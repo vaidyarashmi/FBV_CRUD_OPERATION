@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{%extends 'testapp/base.html' %}
+{%block body_block%}
+<h1>Employee Details</h1>
+<form method="post">
+    {% csrf_token %}
+Employee Number: <input type="text" name="eno" value="{{emp.eno}}">
+<p></p>
+Employee Name: <input type="text" name="ename" value="{{emp.ename}}"
+><p></p>
+Employee Salary: <input type="text" name="esal" value="{{emp.esal}}">
+<p></p>
+Employee Address: <input type="text" name="eaddr" value="{{emp.eaddr}}"
+> <p></p>
+<input type="submit" class='btn btn-warning btn-lg' value="Update Record">
+</form>
+{%endblock%}

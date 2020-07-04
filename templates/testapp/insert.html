@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+{%extends 'testapp/base.html' %}
+{%block body_block%}
+<form method="post">
+    {% csrf_token %}
+    <table border="1">
+    {{form}}
+        </table><br><br>
+    <button type="submit">Submit</button>
+</form>
+{%endblock%}

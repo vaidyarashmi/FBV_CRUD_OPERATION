@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{%extends 'testapp/base.html' %}
+{%block body_block%}
+<h1>Employee Details</h1>
+<table border="2">
+    <thead>
+    <th>number</th>
+     <th>name</th>
+     <th>salary</th>
+     <th>address</th>
+    <th>Actions</th>
+    </thead>
+    {%for i in emp%}
+    <tr>
+    <td>{{i.eno}}</td>
+     <td>{{i.ename}}</td>
+     <td>{{i.esal}}</td>
+     <td>{{i.eaddr}}</td>
+        <td>
+            <a href="/update/{{i.id}}">Update</a>
+            <a href="/delete/{{i.id}}">Delete</a>
+        </td>
+    </tr>
+    {%endfor%}
+</table><br><br><br>
+<a href="/insert" class='btn btn-primary btn-lg'>
+Do You Want to Insert New Employee</a>
+
+{%endblock%}
